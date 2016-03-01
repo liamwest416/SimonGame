@@ -30,6 +30,8 @@
         {
             this.startButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.simonPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.simonPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
@@ -42,6 +44,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // exitButton
             // 
@@ -55,6 +58,17 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // simonPicture
+            // 
+            this.simonPicture.BackColor = System.Drawing.Color.Transparent;
+            this.simonPicture.BackgroundImage = global::SimonGame.Properties.Resources.THISISSimon;
+            this.simonPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.simonPicture.Location = new System.Drawing.Point(59, 0);
+            this.simonPicture.Name = "simonPicture";
+            this.simonPicture.Size = new System.Drawing.Size(303, 288);
+            this.simonPicture.TabIndex = 2;
+            this.simonPicture.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -62,11 +76,13 @@
             this.BackgroundImage = global::SimonGame.Properties.Resources.Simon_Backround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(426, 334);
+            this.Controls.Add(this.simonPicture);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Simon Game";
+            ((System.ComponentModel.ISupportInitialize)(this.simonPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -75,6 +91,7 @@
 
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox simonPicture;
     }
 }
 

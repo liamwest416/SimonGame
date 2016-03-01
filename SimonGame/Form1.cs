@@ -12,6 +12,8 @@ namespace SimonGame
 {
     public partial class Form1 : Form
     {
+
+        public static List<string> pattern = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +22,20 @@ namespace SimonGame
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            RunGame rg = new RunGame();
+            this.Controls.Add(rg);
+
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+            simonPicture.Visible = false;
+
+
+
+
         }
     }
 }
