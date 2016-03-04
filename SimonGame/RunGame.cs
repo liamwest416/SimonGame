@@ -16,8 +16,9 @@ namespace SimonGame
         int simonColors;
         int listNum;
         int guessIndex;
-      
-              
+        Random RandomColors = new Random();
+        int guess;
+
         public RunGame()
         {
 
@@ -30,12 +31,14 @@ namespace SimonGame
             Form1.pattern.Clear();
             this.Refresh();
             Thread.Sleep(1000);
+            ComputerTurn();
 
         }
         public void ComputerTurn()
         {
-            Random RandomColors = new Random();
-            RandomColors.Next(0, 4);
+            Refresh();
+            Thread.Sleep(2000);
+            guess = 0;
             simonColors = RandomColors.Next(0, 4);
             Form1.pattern.Add(simonColors);
 
@@ -43,23 +46,45 @@ namespace SimonGame
             listNum = Form1.pattern.Count;
             for (int i = 0; i < listNum; i++)
             {
-                if (i == 0)
+                if (Form1.pattern[i] == 0)
                 {
+                    guess = 0;
                     greenButton.BackColor = Color.PaleGreen;
+                    Refresh();
+                    Thread.Sleep(500);
+                    greenButton.BackColor = Color.Lime;
+               
                 }
-                else if (i == 1)
+                else if (Form1.pattern[i] == 1)
                 {
+                    guess = 1;
                     redButton.BackColor = Color.LightCoral;
+                    Refresh();
+                    Thread.Sleep(500);
+                    redButton.BackColor = Color.Red;
+                   
 
                 }
-                else if (i == 2)
+                else if (Form1.pattern[i] == 2)
                 {
+                    guess = 2;
                     blueButton.BackColor = Color.LightBlue;
+                    Refresh();
+                    Thread.Sleep(500);
+                    blueButton.BackColor = Color.Blue;
+                   
                 }
-                else if (i == 3)
+                else if (Form1.pattern[i] == 3)
                 {
+                    guess = 3;
                     yellowButton.BackColor = Color.LightYellow;
+                    Refresh();
+                    Thread.Sleep(500);
+                    yellowButton.BackColor = Color.Yellow;
+                    
                 }
+                Refresh();
+                Thread.Sleep(1500);
             }
             guessIndex = 0;
         }  
@@ -67,11 +92,35 @@ namespace SimonGame
         private void greenButton_Click(object sender, EventArgs e)
         {
             
+            if (Form1.pattern[guess] == 0)
+            {
+                ComputerTurn();
+            }
         }
 
         private void redButton_Click(object sender, EventArgs e)
         {
-
+            
+            if (Form1.pattern[guess] == 1)
+            {
+                ComputerTurn();
+            }
+        }
+        private void blueButton_Click(object sender, EventArgs e)
+        {
+            guess = 2;
+            if (Form1.pattern[guess] == 2)
+            {
+                ComputerTurn();
+            }
+        }
+        private void yellowButton_Click(object sender, EventArgs e)
+        {
+            guess = 3;
+            if (Form1.pattern[guess] == 3)
+            {
+                ComputerTurn();
+            }
         }
     }
 }

@@ -43,6 +43,7 @@
             this.yellowButton.Size = new System.Drawing.Size(157, 127);
             this.yellowButton.TabIndex = 0;
             this.yellowButton.UseVisualStyleBackColor = false;
+            this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
             // 
             // greenButton
             // 
@@ -75,6 +76,7 @@
             this.blueButton.Size = new System.Drawing.Size(148, 127);
             this.blueButton.TabIndex = 3;
             this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
             // 
             // RunGame
             // 

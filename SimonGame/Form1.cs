@@ -26,12 +26,10 @@ namespace SimonGame
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            RunGame rg = new RunGame();
-            this.Controls.Add(rg);
-
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
             simonPicture.Visible = false;
+            RunGame rg = new RunGame();
+            this.Controls.Add(rg);
+
 
 
 
