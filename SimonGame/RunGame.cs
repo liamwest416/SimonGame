@@ -98,9 +98,10 @@ namespace SimonGame
               
             }
 
-            if (Form1.pattern[guess] == Form1.pattern.Count)
+            if (Form1.pattern[guess] == Form1.pattern.Count)  
             {
                 ComputerTurn();
+                
             }
         }
 

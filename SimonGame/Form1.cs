@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// created by:
+
 namespace SimonGame
 {
     public partial class Form1 : Form
@@ -28,7 +30,10 @@ namespace SimonGame
         {
             simonPicture.Visible = false;
             RunGame rg = new RunGame();
-            this.Controls.Add(rg);
+            this.Controls.Add(rg);
+
+            
+
 
 
 
