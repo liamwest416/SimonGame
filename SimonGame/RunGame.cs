@@ -94,6 +94,12 @@ namespace SimonGame
             
             if (Form1.pattern[guess] == 0)
             {
+                guessIndex += 1;
+              
+            }
+
+            if (Form1.pattern[guess] == Form1.pattern.Count)
+            {
                 ComputerTurn();
             }
         }
@@ -103,21 +109,37 @@ namespace SimonGame
             
             if (Form1.pattern[guess] == 1)
             {
+                guessIndex += 1;
+             
+            }
+            if (Form1.pattern[guess] == Form1.pattern.Count)
+            {
                 ComputerTurn();
             }
         }
         private void blueButton_Click(object sender, EventArgs e)
         {
-            guess = 2;
+          
             if (Form1.pattern[guess] == 2)
+            {
+                guessIndex += 1;
+                
+            }
+            if (Form1.pattern[guess] == Form1.pattern.Count)
             {
                 ComputerTurn();
             }
+
         }
         private void yellowButton_Click(object sender, EventArgs e)
         {
-            guess = 3;
+         
             if (Form1.pattern[guess] == 3)
+            {
+                guessIndex += 1;
+                
+            }
+            if (Form1.pattern[guess] == Form1.pattern.Count)
             {
                 ComputerTurn();
             }
